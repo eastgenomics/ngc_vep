@@ -1,0 +1,63 @@
+{
+  "name": "ngc_vep_grch37",
+  "title": "NGC vep grch37 pipeline",
+  "summary": "ngc_vep grch37 pipeline",
+  "dxapi": "1.0.0",
+  "version": "1.0.0",
+  "inputSpec": [
+    {
+      "name": "input_vcf_files",
+      "label": "VCF files",
+      "class": "array:file",
+      "optional": false,
+      "patterns": ["*.vcf.gz","*.vcf.gz.tbi"],
+      "help": ""
+    },
+    {
+      "name": "input_snv_bundle",
+      "label": "NGC SNV pipeline bundle",
+      "class": "file",
+      "optional": false,
+      "patterns": ["*.tar.gz"],
+      "help": ""
+    }
+  ],
+  "outputSpec": [
+    {
+      "name": "outfiles",
+      "label": "output files",
+      "class": "array:file",
+      "patterns": [
+        "*"
+      ],
+      "help": ""
+    }
+  ],
+  "runSpec": {
+    "timeoutPolicy": {
+      "*": {
+        "hours": 96
+      }
+    },
+    "interpreter": "bash",
+    "file": "src/ngc_vep.sh",
+    "distribution": "Ubuntu",
+    "release": "20.04",
+    "version": "0"
+  },
+  "access": {
+    "network": [
+      "*"
+    ],
+    "project": "CONTRIBUTE"
+  },
+  "regionalOptions": {
+    "aws:eu-central-1": {
+      "systemRequirements": {
+        "*": {
+          "instanceType": "mem3_ssd1_v2_x96"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+family_id	ngc_id	father_id	mother_id	gender_declared	affected	ilmn_id	family_size	load_hpc_date	bam_path	vcf_path
+NGC00001	TwEx_EX1910699	TwEx_EX1910701	TwEx_EX1910700	M	2	TwEx_EX1910699	trio	2022-01-16	/home/dnanexus/snv-master/demo/example/bam/TwEx_EX1910699.bam	/home/dnanexus/snv-master/demo/example/vcf/TwEx_EX1910699.vcf.gz
+NGC00001	TwEx_EX1910700	None	None	F	1	TwEx_EX1910700	trio	2022-01-16	/home/dnanexus/snv-master/demo/example/bam/TwEx_EX1910700.bam	/home/dnanexus/snv-master/demo/example/vcf/TwEx_EX1910700.vcf.gz
+NGC00001	TwEx_EX1910701	None	None	M	1	TwEx_EX1910701	trio	2022-01-16	/home/dnanexus/snv-master/demo/example/bam/TwEx_EX1910701.bam	/home/dnanexus/snv-master/demo/example/vcf/TwEx_EX1910701.vcf.gz
